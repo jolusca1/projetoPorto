@@ -1,6 +1,6 @@
-package com.example.lineporto.domain.dtos;
+package com.example.lineporto.dto;
 
-public record DadosAtualizacaoNavio(
+public record DadosAtualizacaoNavioDTO(
         Long id,
         String imo,
         String nome,

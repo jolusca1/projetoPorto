@@ -6,12 +6,8 @@ import org.springframework.stereotype.Controller;
 
 
 @SpringBootApplication
-@Controller
-
 public class LineportoApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(LineportoApplication.class, args);
 	}
-
 }

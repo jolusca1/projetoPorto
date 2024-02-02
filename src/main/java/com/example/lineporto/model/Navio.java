@@ -1,8 +1,8 @@
-package com.example.lineporto.domain.entities.Navio;
+package com.example.lineporto.model;
 
 
-import com.example.lineporto.domain.dtos.DadosAtualizacaoNavio;
-import com.example.lineporto.domain.dtos.DadosCadastroNavioDTO;
+import com.example.lineporto.dto.DadosAtualizacaoNavioDTO;
+import com.example.lineporto.dto.DadosCadastroNavioDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -28,6 +28,9 @@ public class Navio {
     private String agente;
     private String empresa;
     private Boolean ativo;
+    @OneToOne
+    @JoinColumn(name = "id", referencedColumnName = "id")
+    private Berco berco;
 
     public Navio(DadosCadastroNavioDTO dados) {
         this.imo = dados.imo();
@@ -41,7 +44,7 @@ public class Navio {
         this.ativo = true;
     }
 
-    public void atualizarInformacao(DadosAtualizacaoNavio dados) {
+    public void atualizarInformacao(DadosAtualizacaoNavioDTO dados) {
 
         if (dados.imo() != null) {
             this.imo = dados.imo();

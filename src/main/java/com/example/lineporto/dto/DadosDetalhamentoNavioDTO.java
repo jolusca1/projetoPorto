@@ -1,6 +1,6 @@
-package com.example.lineporto.domain.dtos;
+package com.example.lineporto.dto;
 
-import com.example.lineporto.domain.entities.Navio.Navio;
+import com.example.lineporto.model.Navio;
 
 public record DadosDetalhamentoNavioDTO(Long id, String imo, String nome, double comprimento, double largura, double dwt, String produto, String agente, String empresa) {
 

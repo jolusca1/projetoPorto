@@ -1,5 +1,6 @@
-package com.example.lineporto.domain.dtos;
+package com.example.lineporto.dto;
 
+import com.example.lineporto.model.Berco;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -19,6 +20,9 @@ public record DadosCadastroNavioDTO(
         @NotBlank
         String agente,
         @NotBlank
-        String empresa
+        String empresa,
+
+        @NotBlank
+        Berco berco
 ) {
 }
